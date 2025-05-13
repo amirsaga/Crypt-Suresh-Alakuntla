@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import CryptoTable from './components/CryptoTable';
-import CryptoDetail from './components/CryptoDetail';
+import CryptoTable from './Components/CryptoTable';
+import CryptoDetail from './Components/CryptoDetail';
 
 function App() {
 return (
