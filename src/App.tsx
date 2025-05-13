@@ -1,25 +1,17 @@
-
-import React from "react";
-import Home from "./Pages/Home";
-import './App.css'
-import DetailsPage from "./Pages/DetailsPage";
-import {Routes, Route} from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CryptoTable from './components/CryptoTable';
+import CryptoDetail from './components/CryptoDetail';
 
 function App() {
-  
-
-  return (
-    <BrowserRouter>
-      <div>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/details" element={<DetailsPage/>}/>
-        </Routes>
-      </div>
-    </BrowserRouter>
-    
-  );
+return (
+  <Router>
+    <Routes>
+      <Route path="/" element={<CryptoTable />} />
+      <Route path="/crypto/:id" element={<CryptoDetail />} />
+    </Routes>
+  </Router>
+);
 }
 
 export default App;
